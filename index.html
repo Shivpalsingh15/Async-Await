@@ -7,9 +7,24 @@
     <script src="async.js"></script>
 </head>
 <body>
+
+    <h1>welcome to js</h1>
     <script>
-        let a = 10
-        console.log('a:', a)
-    </script>
+        h1 = document.querySelector('h1')
+        
+        function changecolor(color){
+            setInterval(()=>{
+                h1.style.color = color;
+                
+            }, 1000)
+        }
+
+        async function demo(){
+            await changecolor("red")
+            await changecolor("pink")
+            await changecolor("green")
+            await changecolor("yellow")
+        }
+        </script>
 </body>
 </html>
